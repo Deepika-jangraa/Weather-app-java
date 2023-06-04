@@ -1,0 +1,10 @@
+OkHttpClient client = new OkHttpClient();
+
+Request request = new Request.Builder()
+	.url("https://forecast9.p.rapidapi.com/")
+	.get()
+	.addHeader("X-RapidAPI-Key", "0e7eb61d82mshd0bf3af87f19f67p1dd59ejsne6c9724cf7b5")
+	.addHeader("X-RapidAPI-Host", "forecast9.p.rapidapi.com")
+	.build();
+
+Response response = client.newCall(request).execute();
